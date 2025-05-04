@@ -1,5 +1,4 @@
-import withPWA from "next-pwa";
-
+// next.config.mjs
 const nextConfig = {
   reactStrictMode: true,
   experimental: {
@@ -8,8 +7,4 @@ const nextConfig = {
   },
 };
 
-export default withPWA({
-  dest: "public",
-  disable: process.env.NODE_ENV === "development", // ✅ OK
-  // ❌ NÃO coloque 'experimental' aqui
-})(nextConfig);
+export default nextConfig;
