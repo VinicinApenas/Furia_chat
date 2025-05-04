@@ -2,14 +2,9 @@
 import withPWA from "next-pwa";
 
 /** @type {import('next').NextConfig} */
-const baseConfig = {
+const nextConfig = {
   reactStrictMode: true,
-  experimental: {
-    turbo: {
-      loaders: {},
-    },
-    serverActions: true,
-  },
+
 };
 
 const pwaConfig = {
@@ -17,4 +12,4 @@ const pwaConfig = {
   disable: process.env.NODE_ENV === "development",
 };
 
-export default withPWA(pwaConfig)(baseConfig);
+export default withPWA(pwaConfig)(nextConfig);
