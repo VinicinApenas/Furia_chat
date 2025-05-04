@@ -5,7 +5,9 @@ import withPWA from "next-pwa";
 const baseConfig = {
   reactStrictMode: true,
   experimental: {
-    turbo: false,
+    turbo: {
+      loaders: {},
+    },
     serverActions: true,
   },
 };
