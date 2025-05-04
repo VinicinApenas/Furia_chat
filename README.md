@@ -1,29 +1,48 @@
-# Create T3 App
+# 🖤 FURIA Fans Chat
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+Um chat interativo para torcedores da FURIA Esports, com integração de IA, sons personalizados, animações e muito amor pelo time!
 
-## What's next? How do I make an app with this?
+![FURIA Banner](public/images/furiagg.png)
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+## 💡 Sobre o projeto
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+Esse chat foi desenvolvido como parte de um desafio técnico para o processo seletivo da FURIA. A ideia é permitir que fãs interajam com um bot temático que responde como um verdadeiro torcedor.
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Drizzle](https://orm.drizzle.team)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+## ⚙️ Tecnologias utilizadas
 
-## Learn More
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [tRPC](https://trpc.io/)
+- [OpenAI API](https://platform.openai.com/)
+- [Prisma ORM](https://www.prisma.io/)
+- [Howler.js](https://howlerjs.com/) (sons no chat)
+- [Framer Motion](https://www.framer.com/motion/) (animações)
+- [Vercel](https://vercel.com/) (deploy)
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+## ✨ Funcionalidades
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+- 💬 Chat responsivo com IA (OpenAI GPT-3.5)
+- 🔊 Sons personalizados ao enviar/receber mensagens
+- 🎨 Interface animada com framer-motion
+- 🧠 Mensagens com contexto temático da FURIA
+- 📱 Totalmente responsivo
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+## 📦 Instalação
 
-## How do I deploy this?
+```bash
+# Clone o repositório
+git clone https://github.com/VinicinApenas/Furia_chat.git
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+# Acesse a pasta
+cd Furia_chat
+
+# Instale as dependências
+npm install
+
+# Configure as variáveis de ambiente
+cp .env.example .env
+# Edite o .env com sua chave da OpenAI e conexão com o banco
+
+# Rode a aplicação
+npm run dev
