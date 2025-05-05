@@ -9,8 +9,7 @@ import { createTRPCContext } from "~/server/api/trpc";
 import { createQueryClient } from "./query-client";
 
 /**
- * This wraps the `createTRPCContext` helper and provides the required context for the tRPC API when
- * handling a tRPC call from a React Server Component.
+ * Cria o contexto para chamadas tRPC vindas de Server Components
  */
 const createContext = cache(async () => {
   const heads = new Headers(await headers());
@@ -22,7 +21,9 @@ const createContext = cache(async () => {
 });
 
 const getQueryClient = cache(createQueryClient);
-const caller = createCaller(createContext);
+
+// ✅ Chama o createCaller vindo de root.ts
+const caller = createCaller(await createContext());
 
 export const { trpc: api, HydrateClient } = createHydrationHelpers<AppRouter>(
   caller,
