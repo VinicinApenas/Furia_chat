@@ -1,19 +1,17 @@
+// next.config.mjs
 import withPWA from "next-pwa";
 
-/** @type {import('next').NextConfig} */
-const baseConfig = {
+const nextConfig = {
   reactStrictMode: true,
-  experimental: {
-    turbo: {
-      loaders: {},
-    },
-    serverActions: {},
+  turbopack: {
+    rules: {}, // ou remova essa parte se não estiver usando loaders customizados
+  },
+  typescript: {
+    ignoreBuildErrors: false,
   },
 };
 
-const pwaConfig = {
+export default withPWA({
   dest: "public",
   disable: process.env.NODE_ENV === "development",
-};
-
-export default withPWA(pwaConfig)(baseConfig);
+})(nextConfig);
